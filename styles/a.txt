@@ -1,0 +1,243 @@
+Manipular o DOM (Document Object Model) com JavaScript envolve acessar, modificar e criar elementos e atributos HTML dinamicamente em uma página web. Aqui está um resumo prático de como isso funciona:
+
+1. Acessar Elementos do DOM
+
+Por ID:
+
+const elemento = document.getElementById("idDoElemento");
+
+Por Classe:
+
+const elementos = document.getElementsByClassName("classe");
+
+Por Tag:
+
+const tags = document.getElementsByTagName("div");
+
+Por Seletor CSS:
+
+const elemento = document.querySelector(".classeOu#id");
+const elementos = document.querySelectorAll(".classe");
+
+
+2. Modificar Conteúdo
+
+Texto:
+
+elemento.textContent = "Novo texto";
+
+HTML:
+
+elemento.innerHTML = "<strong>Novo conteúdo</strong>";
+
+
+3. Alterar Atributos
+
+Definir ou Alterar:
+
+elemento.setAttribute("src", "imagem.jpg");
+elemento.id = "novoId";
+
+Remover:
+
+elemento.removeAttribute("disabled");
+
+
+4. Estilos
+
+Adicionar ou Alterar Estilo Inline:
+
+elemento.style.color = "red";
+elemento.style.fontSize = "20px";
+
+Adicionar Classes:
+
+elemento.classList.add("novaClasse");
+
+Remover Classes:
+
+elemento.classList.remove("classeAntiga");
+
+
+5. Adicionar ou Remover Elementos
+
+Criar Novo Elemento:
+
+const novoElemento = document.createElement("div");
+novoElemento.textContent = "Olá!";
+
+Adicionar ao DOM:
+
+document.body.appendChild(novoElemento);
+
+Remover do DOM:
+
+elemento.remove();
+
+
+6. Eventos
+
+Adicionar Eventos:
+
+elemento.addEventListener("click", function() {
+  alert("Elemento clicado!");
+});
+
+Remover Eventos:
+
+elemento.removeEventListener("click", funcaoReferencia);
+
+
+7. Navegação no DOM
+
+Filhos e Pais:
+
+const pai = elemento.parentElement;
+const filhos = elemento.children;
+
+Próximo e Anterior:
+
+const proximo = elemento.nextElementSibling;
+const anterior = elemento.previousElementSibling;
+
+
+Essas são as principais formas de manipular o DOM usando JavaScript. Com essas bases, você pode criar, modificar e interagir dinamicamente com páginas web.
+[08:53, 02/12/2024] +55 47 92000-3758: Para criar uma lista não ordenada (ul) com vários itens de lista (li), você pode usar um loop para adicionar os itens dinamicamente. Veja um exemplo:
+
+Exemplo:
+
+Suponha que você tenha uma lista de itens chamada frutas e queira criar uma ul com um li para cada fruta.
+
+// Lista de itens
+const frutas = ['Maçã', 'Banana', 'Laranja', 'Manga'];
+
+// Criação do elemento UL
+const lista = document.createElement('ul');
+lista.className = 'minha-lista'; // Adiciona uma classe opcional
+
+// Loop para criar cada LI e adicionar à UL
+frutas.forEach(fruta => {
+  const item = document.createElement('li'); // Cria o LI
+  item.textContent = fruta; // Define o texto do LI
+  lista.appendChild(item); // Adiciona o LI à UL
+});
+
+// Adiciona a UL ao corpo do documento
+document.body.appendChild(lista);
+
+Explicação:
+
+1. document.createElement('ul'): Cria o elemento ul.
+
+
+2. frutas.forEach(callback): Itera sobre o array frutas.
+
+
+3. document.createElement('li'): Cria um novo item de lista (li) para cada elemento do array.
+
+
+4. item.textContent = fruta: Define o texto do item com o valor atual da iteração.
+
+
+5. lista.appendChild(item): Adiciona cada li à ul.
+
+
+
+Resultado no HTML:
+
+O script acima criará o seguinte HTML:
+
+<ul class="minha-lista">
+  <li>Maçã</li>
+  <li>Banana</li>
+  <li>Laranja</li>
+  <li>Manga</li>
+</ul>
+
+Com Outra Abordagem: Usando innerHTML
+
+Se quiser adicionar os itens de forma mais simples, pode usar innerHTML para criar todos os li de uma vez:
+
+const frutas = ['Maçã', 'Banana', 'Laranja', 'Manga'];
+const lista = document.createElement('ul');
+
+lista.innerHTML = frutas.map(fruta => <li>${fruta}</li>).join('');
+document.body.appendChild(lista);
+
+Diferença:
+
+appendChild: Mais seguro, pois manipula o DOM diretamente.
+
+innerHTML: Mais compacto, mas pode ser menos seguro se houver entrada dinâmica (exposição a XSS).
+
+O localStorage é uma API do JavaScript que permite armazenar dados localmente no navegador do usuário, sem que eles expirem quando a página é recarregada. A principal vantagem do localStorage é que os dados persistem mesmo após o fechamento e reabertura do navegador, até que o usuário os remova explicitamente ou até que o armazenamento seja limpo.
+
+Aqui estão os principais métodos de uso do localStorage:
+
+1. Armazenando dados
+Você pode usar o método setItem para armazenar um item no localStorage. Ele recebe dois parâmetros:
+
+A chave (key): o nome do item a ser armazenado.
+O valor (value): o valor a ser armazenado.
+javascript
+Copiar código
+// Armazenando uma string
+localStorage.setItem('nome', 'João');
+
+// Armazenando um número (lembre-se que localStorage armazena tudo como string)
+localStorage.setItem('idade', 30);
+2. Recuperando dados
+Para recuperar um item armazenado, você pode usar o método getItem, que recebe a chave como argumento e retorna o valor armazenado.
+
+javascript
+Copiar código
+// Recuperando um valor
+let nome = localStorage.getItem('nome');
+let idade = localStorage.getItem('idade');
+
+console.log(nome);  // "João"
+console.log(idade); // "30" (lembre-se, é retornado como string)
+3. Removendo dados
+Para remover um item do localStorage, use o método removeItem, passando a chave do item que deseja excluir.
+
+javascript
+Copiar código
+// Removendo um item
+localStorage.removeItem('nome');
+4. Limpando todos os dados
+Se você quiser remover todos os dados armazenados no localStorage, use o método clear.
+
+javascript
+Copiar código
+// Limpando todos os itens armazenados
+localStorage.clear();
+5. Verificando se um item existe
+O localStorage retorna null se a chave não for encontrada. Assim, você pode verificar se um item está presente antes de usá-lo.
+
+javascript
+Copiar código
+let nome = localStorage.getItem('nome');
+if (nome) {
+    console.log('Nome encontrado:', nome);
+} else {
+    console.log('Nome não encontrado.');
+}
+6. Armazenando objetos (JSON)
+Como o localStorage só armazena strings, você pode armazenar objetos ou arrays utilizando JSON.stringify para converter o objeto em uma string antes de armazená-lo, e JSON.parse para converter de volta para um objeto.
+
+javascript
+Copiar código
+// Armazenando um objeto
+const usuario = { nome: 'João', idade: 30 };
+localStorage.setItem('usuario', JSON.stringify(usuario));
+
+// Recuperando o objeto
+let usuarioRecuperado = JSON.parse(localStorage.getItem('usuario'));
+console.log(usuarioRecuperado.nome); // "João"
+console.log(usuarioRecuperado.idade); // 30
+Considerações Importantes:
+Capacidade: O localStorage tem uma limitação de armazenamento (geralmente cerca de 5MB por domínio).
+Sincronicidade: O localStorage é síncrono, ou seja, as operações de leitura e escrita podem bloquear o thread principal por um curto período.
+Acesso por domínio: O localStorage armazena dados por domínio, ou seja, os dados armazenados por um site não são acessíveis a outros sites.
+Segurança: O localStorage não é criptografado, e os dados ficam disponíveis para qualquer script no mesmo domínio. Portanto, não armazene informações sensíveis.
+Esses são os métodos principais para trabalhar com localStorage no JavaScript.

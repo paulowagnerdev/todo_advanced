@@ -1,0 +1,68 @@
+.div-card{
+    background-color: rgb(239, 239, 239);
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(112,112,112,1);
+    box-shadow: 0px 0px 16px 0px rgba(112,112,112,1);
+    width: 420px;
+    max-height: 175px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 20px;
+}
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.title{
+    font-family: "Anton", sans-serif;
+}
+
+.line{
+    height: 0.1px;
+    width: 100%;
+    border: 0.3px solid rgb(167, 167, 167);
+}
+
+.add-taks-div{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.3rem 0px;
+}
+
+.add-taks-div div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-taks-div input{
+    width: 89%;
+    height: 50px;
+    border-radius: 3px;
+    border: 0.3px solid rgb(167, 167, 167);
+    padding: 5px;
+    margin: 2px 0px;
+}
+
+#task-submit{
+    width: 45px;
+    height: 48px;
+    font-size: 12px;
+    transition: 1;
+    margin-left: 3px;
+}
+
+#taks-submit:hover{
+    background-color: rgb(167, 167, 167);
+}

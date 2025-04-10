@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/card.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/task.css">
+    <link rel="stylesheet" href="styles/search_card.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>TO DO List</title>
+</head>
+<body>
+    <main>
+        <div class="div-card">
+            <div class="title">
+                <h1>To Do List</h1>
+            </div>
+            <div class="line"></div>
+            <div class="add-taks-div">
+                <label>Adicione uma tarefa</label>
+                <div>
+                    <input type="text" id="input-value-task" placeholder="O que você irá fazer?">
+                    <button type="submit" id="task-submit"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+           
+        </div>
+
+        
+        <div class="card-task">
+
+            
+            <div class="task">
+
+                <div class="taks-title">
+                    <p>Estudar Programação Front-End</p>
+                </div>
+                
+                <input type="text" class="hide" id="edit-task-input" placeholder="Digite para editar...">
+                
+                <ul>
+                    <li>
+                        <button class="task-button-icons task-check-button">
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="task-button-icons task-pen-button">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="task-button-icons task-trash-button">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </li>
+                </ul>
+
+                <p class="warmMenssageDoneTask hide">retire o concluído para modificar</p>
+            
+            </div>
+
+            <div class="task">
+
+                <div class="taks-title">
+                    <p>Estudar Programação React</p>
+                </div>
+                
+                <input type="text" class="hide" id="edit-task-input" placeholder="Digite para editar...">
+                
+                <ul>
+                    <li>
+                        <button class="task-button-icons task-check-button">
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="task-button-icons task-pen-button">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="task-button-icons task-trash-button">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </li>
+                </ul>
+
+                <p class="warmMenssageDoneTask hide">retire o concluído para modificar</p>
+            
+            </div>
+
+            <div class="task">
+
+                <div class="taks-title">
+                    <p>Estudar Programação DB</p>
+                </div>
+                
+                <input type="text" class="hide" id="edit-task-input" placeholder="Digite para editar...">
+                
+                <ul>
+                    <li>
+                        <button class="task-button-icons task-check-button">
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="task-button-icons task-pen-button">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="task-button-icons task-trash-button">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </li>
+                </ul>
+
+                <p class="warmMenssageDoneTask hide">retire o concluído para modificar</p>
+            
+            </div>
+
+            <div class="task">
+
+                <div class="taks-title">
+                    <p>Estudar Programação C#</p>
+                </div>
+                
+                <input type="text" class="hide" id="edit-task-input" placeholder="Digite para editar...">
+                
+                <ul>
+                    <li>
+                        <button class="task-button-icons task-check-button">
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="task-button-icons task-pen-button">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="task-button-icons task-trash-button">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </li>
+                </ul>
+
+                <p class="warmMenssageDoneTask hide">retire o concluído para modificar</p>
+            
+            </div>
+
+            
+
+           
+
+        </div>
+
+        <div class="div-search-card div-card">
+            <div class="search">
+                <label>Pesquisar:</label>
+                <div>
+                    <input type="text" id="input-search" placeholder="Buscar...">
+                    <button type="submit" id="search-btn" ><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                </div>
+            </div>
+            <div class="line-vertical"></div>
+            <div class="filter">
+                <span>Filtrar:</span>
+                <div>
+                    <select name="options" id="select-options">
+                        <option value="all">Todos</option>
+                        <option value="open">Abertos</option>
+                        <option value="done">Concluídos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
